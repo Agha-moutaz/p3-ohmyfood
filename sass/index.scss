@@ -1,107 +1,48 @@
-$color-primary: #9365DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$color-primary-hover: rgba(147, 101, 220, .28);
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900i');
-
-html {
-    margin: 0;
-    ul{
-        margin: 0em;
-    padding: 0em;
-    }
-    
-
-    body {
-        font-family: 'Roboto', sans-seirf;
-       width: 100%;
-    }
-    #loading{
-        position: fixed;
-        display: none;
-        width: 100%;
-        height: 100%;
-        top:0;
-        left:0;
-        z-index: 100;
-        background-color: #fff;
-        
-        animation-name: loading;
-        animation-duration: 5s;
-        
-        .modale{
-            background-image: url(../images/loader.gif);
-            width: 500px;
-            height: 500px;
-        }
-      }
-      @keyframes loading{
-        0%{
-            display: flex;
-          }
-        
-        99%{
-          opacity: 0;
-        }
-        
-        100%{
-          display: none;
-        }
-      }
-
-}
-
-
-header {
-    height: 5em;
-
-    .logo {
-        background-image: url('../images/logo/ohmyfood.png');
-        background-size: 10em;
-        //width: 50%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: auto;
-       // box-shadow: rgba(204, 219, 221,230) 3px 3px 6px 0px inset; 
-        box-shadow: 0 8px 2px -2px #eee;
-
-    }
-}
+@import "default";
 
 main {
-
+    .main-wrapper{
+        padding: 0 2em;
+        max-width: 80em;
+        margin: auto;
+    }
     .location {
-        background-color: #dcdcdc;
-        padding-top: 1rem;
-        padding-bottom: 1.2rem;
+        background-color: #dadada;
         align-content: center;
         font-size: 1rem;
         font-weight: bold;
         text-align: center;
+        padding: 1.5em 1em;
+
+        .fa-location-dot{
+            padding: 0;
+            margin-right: 1em;
+        }
        
-    
+        strong{
+            font-size: 1em;
+        }
     }
 
     .menu {
         text-align: center;
         height: 20rem;
-        background-color: #f2f2f23d;
-        line-height: 1em;
+        background-color: #ebebeb;
+        line-height: 2em;
         padding-top: 3em;
        
         h1{
-            font-size: 1.5em;
+            font-size: 2em;
             font-weight: bold;
+            
         }
-        h4{
-            font-size: 1em;
+        h3{
+            font-size: 1.5em;
             color: #878686;
             font-weight: normal;
         }
     }
-
 
     .bouton-resto {
         width: 15em;
@@ -112,18 +53,17 @@ main {
         font-weight: bold;
         border: none;
         padding: 1rem 1.5rem;
-        font-size: 1em;
-        margin: 5em auto;
+        font-size: 1.25em;
+        margin: 0em auto;
         background: linear-gradient(355deg,  $color-primary,  $color-secondary 100%);
         
     }
 
     .fonctionnement{
+        padding: 1em 0;
 
         h2{
-            font-size: 2em;
-            margin-left: 1em;
-            padding-top: 1.5em;
+            font-size: $h2-size;
             font-weight: bold;
         }
 
@@ -155,7 +95,7 @@ main {
                    
                     .name {
                         font-weight: bold;
-                        margin-left: 2em;
+                        margin-left: 1em;
                         font-size: 1.5em;
 
                     }
@@ -164,7 +104,7 @@ main {
                         color: white;
                         background-color: $color-primary;
                         font-size: 0.5em;
-                        margin-right: 2em;
+                        margin-right: 1em;
                         width: 1em;
                         height: 1em;
                         padding: 0.5em;
@@ -188,22 +128,17 @@ main {
 .contenu {
     background-color: #f2f2f2;
     height: auto;
-    height: 95em;
 
     .principal {
+        padding: 1em 0;
         h2 {
-            font-size: 2em;
-            margin-left: 1em;
-            padding-top: 1.5em;
+            font-size: $h2-size;
             font-weight: bold;
         }
 
        
 
-
         article {
-            height: 20em;
-            width: calc(100% - 2em);
             margin: auto;
             padding: 0.5em;
             a{ 
@@ -236,7 +171,7 @@ main {
                 .new {
                     background-color: $color-tertiary;
                     padding: 0.6em 1em ;
-                    font-size: 1.5em;
+                    font-size: 1em;
                     color: #129c7a;
                     position: absolute;
                     top:1em;
@@ -250,9 +185,7 @@ main {
             }
 
             .about {
-                width:  calc(100% - 2em);
-                height: 2.5em;
-                padding: 1em;
+                padding: 1.5em;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
@@ -260,14 +193,12 @@ main {
                 border-radius: 0 0 2em 2em ;
                 color: black;
                 margin-bottom: 1em;
-               
-                
 
-                .text {
+                .description {
                     
-                    h3{
-                        margin: 0;
-
+                    h4{
+                        margin: 0 0 .5em;
+                        font-size: 1.5em;
                     }
 
                     p {
@@ -276,15 +207,12 @@ main {
                     }
                 }
                 .heart{
-                    width: 3em;
-                    height: 3em;
                     font-size: 2em;
-                    font-weight: 300;
                     display: flex;
              
                     
                     .filled{
-                    background : -webkit-linear-gradient( 45deg, $color-secondary 50%, $color-primary 100% );
+                    background : linear-gradient( 45deg, $color-secondary 50%, $color-primary 100% );
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     display: none;
@@ -305,50 +233,117 @@ main {
             }
         }
 
-
     }
-
 
 }
 
-footer {
-    height: 15em;
-    background-color: rgb(51, 50, 50);
-    font-size: 1em;
-    color: white;
-    padding: 3em;
-   
-    .logo{
-        background-image: url('../images/logo/ohmyfood.png');
-        background-size: 10em;
-        width: 10em;
-        height: 1.7em;
-        background-repeat: no-repeat;
-        filter: invert(1);
+@media only screen and (min-width: 768px) {
+    
+    .fonctionnement{
 
+        .fonctionnement.container{ 
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding: 2em;
+            article {
+                width:30%;
+                .context{
+                    .name {
+                
+                        margin-left: 0.5em;
+                        font-size: 1.25em;
 
-    }    
+                    }
 
-    ul {
-        list-style: none;
-        padding-top:2em;
-
-        li {
-            line-height: 2em;
-
-            a {
-                color: white;
-                text-decoration: none;
-
-                .fo {
-                    color: white;
                 }
             }
         }
+            
     }
 
+    .contenu {
+        .principal {
+            .container-rpas{
+
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+
+                article{
+                    padding: 2em;
+                    width: 25%;
+                    .picture{
+                        padding: 0;
+                        .new{
+                        
+                            padding: 0.3em 0.5em ;
+                            font-size: 1em;
+                            top: 0.5em;
+                            right: 0.5em;
+        
+                        }
+                    }
+                    .about {
+                        .text{
+                            margin-right: 1em;
+                        }
+                    
+                    }
+
+                }
+            }
+
+        }
+    }
 }
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 992px) {
+    .fonctionnement{
 
-@media only screen and (min-width: 992px) {}
+        .fonctionnement.container{ 
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding: 2em;
+            article {
+                width:30%;
+                margin-right:1em;
+            }
+        }
+    }
+    .contenu {
+        .principal {
+            .container-repas{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+
+                article{
+                    padding: 2em;
+                    width: 40%;
+                    .picture{
+                        padding: 0;
+                        .new{
+                            background-color: $color-tertiary;
+                            padding: 0.3em 0.5em ;
+                            font-size: 1em;
+                            top: 0.5em;
+                            right: 0.5em;
+                            font-weight: bold;
+                            border-radius: 0.3rem;
+                        }
+                    }
+                    .about {
+                        .description{
+                            margin-right: 1em;
+                        }
+                    }
+   
+                }
+            }
+
+        }
+    }
+}
+
