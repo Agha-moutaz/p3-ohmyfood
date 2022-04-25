@@ -208,6 +208,10 @@ main .fonctionnement .container .option .context:hover .icon {
   color: #9365DC;
 }
 main .fonctionnement .container .option .context .name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
   font-weight: bold;
   margin-left: 1em;
   font-size: 1.25em;

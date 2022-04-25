@@ -246,6 +246,9 @@ main .corp .container article.repas {
   cursor: pointer;
   margin: 0 0 1em 0;
 }
+main .corp .container article.repas:hover .about {
+  width: calc(100% - 7em);
+}
 main .corp .container article.repas:hover .check {
   display: flex;
   width: 4em;

@@ -94,9 +94,14 @@ main {
                                
                    
                     .name {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        word-break: break-all;
                         font-weight: bold;
                         margin-left: 1em;
                         font-size: 1.25em;
+
 
                     }
 
@@ -209,13 +214,14 @@ main {
                 .heart{
                     font-size: 2em;
                     display: flex;
-             
+                   
                     
                     .filled{
                     background : linear-gradient( 45deg, $color-secondary 50%, $color-primary 100% );
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     display: none;
+                    
                     }
                     
                     &:hover{

@@ -145,6 +145,9 @@ main {
             
                     
                     &:hover{
+                        .about{
+                            width:calc(100% - 7em);
+                        }
                         .check{
                             display: flex;
                             width: 4em;
